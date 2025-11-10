@@ -39,8 +39,9 @@ def send_to_wechat(send_key, title, desp=''):
 
 # 使用示例 - 请将YOUR_SEND_KEY_HERE替换为你的实际SendKey
 if __name__ == "__main__":
+    import os
     # 你的SendKey
-    my_send_key = "SCT302180TUGDW4agBBvoVv5Oa6aOQWD9D"
+    my_send_key = SECRET_KEY = os.environ.get('MY_SEND_KEY')
 
     # 发送一条简单的测试消息
     send_to_wechat(my_send_key, "🚀 来自Python的问候", "你好！这是一条通过Server酱从Python程序发送的测试消息。")
